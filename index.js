@@ -210,7 +210,12 @@ lastElement	Значение последнего элемента массив�
 
 /* 
 
+const fruits = ["apple", "peach", "pear", "banana"];
 
+
+const lastElementIndex = fruits.length - 1;
+
+const lastElement = fruits[lastElementIndex];
 
 */
 
