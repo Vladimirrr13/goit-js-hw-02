@@ -216,25 +216,154 @@ const fruits = ["apple", "peach", "pear", "banana"];
 const lastElementIndex = fruits.length - 1;
 
 const lastElement = fruits[lastElementIndex];
+// Change code below this line
+
+
+console.log(lastElementIndex);
+console.log(lastElement);
+
+*/
+
+
+/* --------------------------------- TASK 9 --------------------------------- */
+
+/* Напиши функцию getExtremeElements(array) которая принимает один параметр array - массив элементов произвольной длины. Функция должна возвращать массив из двух элементов - первого и последнего элемента параметра array.
+
+Объявлена функция getExtremeElements(array)
+Вызов getExtremeElements([1, 2, 3, 4, 5]) возвращает [1, 5]
+Вызов getExtremeElements(["Earth", "Mars", "Venus"]) возвращает ["Earth", "Venus"]
+Вызов getExtremeElements(["apple", "peach", "pear", "banana"]) возвращает ["apple", "banana"] */
+
+
+
+/* 
+
+function getExtremeElements(array) {
+  // Change code below this line
+
+
+const lastElementIndex = array.length - 1;
+const lastElement = array[lastElementIndex];
+const firstElementIndex = array[0];
+
+return [firstElementIndex, lastElement]
+
+  // Change code above this line
+}
+
+console.log(getExtremeElements([1, 2, 3, 4, 5]));
+console.log(getExtremeElements(["Earth", "Mars", "Venus"]));
+console.log(getExtremeElements(["apple", "peach", "pear", "banana"]));
 
 */
 
 
 
-// Example 4 - Логування елементів
-// Напиши функцію logItems(items), яка отримує масив та використовує цикл for, який для кожного елемента масиву буде виводити в консоль повідомлення у форматі <номер елемента> - <значення елемента>. Нумерація елементів повинна починатися з 1.
 
-// Наприклад для першого елемента масиву ['Mango', 'Poly', 'Ajax'] з індексом 0 буде виведено 1 - Mango, а для індексу 2 -'Poly' виведе  3 - Ajax.
+/* --------------------------------- TASK 10 --------------------------------- */
 
-// function logItems(items) {
-//     console.log('--------------');
-//     // for (let i = 0, num = 1; i < items.length; i+=1, num+=1){
-//     //     console.log(`${num} - ${items[i]}`);
-//     // }
-//     for (let i = 0; i < items.length; i += 1) {
-//         console.log(`${i+1} - ${items[i]}`);
-//     }
-// }
+/* Дополни код функции splitMessage(message, delimiter) так, чтобы она возвращала в переменной words результат разделения строки message по разделителю delimiter - массив строк.
 
-// logItems(['Mango', 'Poly', 'Ajax']);
-// logItems(['🍎', '🍇', '🍑', '🍌', '🍋']);
+Объявлена функция splitMessage(message, delimiter)
+Вызов splitMessage("Mango hurries to the train", " ") возвращает ["Mango", "hurries", "to", "the", "train"]
+Вызов splitMessage("Mango", "") возвращает ["M", "a", "n", "g", "o"]
+Вызов splitMessage("best_for_week", "_") возвращает ["best", "for", "week"] */
+
+
+/* 
+
+function splitMessage(message, delimiter) {
+  let words = message.split(delimiter);
+  // Change code below this line
+
+  // Change code above this line
+  return words;
+}
+
+
+console.log(splitMessage("Mango hurries to the train", " "));
+console.log(splitMessage("Mango", ""));
+console.log(splitMessage("best_for_week", "_"));
+
+*/
+
+
+
+
+
+/* --------------------------------- TASK 11 --------------------------------- */
+
+
+/* Сервису гравировки украшений нужна функция, которая бы автоматически считала цену гравировки, в зависимости от количества слов и цены за слово.
+
+Объявлена функция calculateEngravingPrice(message, pricePerWord). Эта функция принимает строку, состоящую из слов разделённых только пробелами (параметр message) и цену гравировки одного слова (параметр pricePerWord).
+
+Напиши тело функции, чтобы она возвращала общую стоимость гравировки всех слов в строке.
+
+Объявлена функция calculateEngravingPrice(message, pricePerWord)
+Вызов calculateEngravingPrice("JavaScript is in my blood", 10) возвращает 50
+Вызов calculateEngravingPrice("JavaScript is in my blood", 20) возвращает 100
+Вызов calculateEngravingPrice("Web-development is creative work", 40) возвращает 160
+Вызов calculateEngravingPrice("Web-development is creative work", 20) возвращает 80 */
+
+
+/* 
+
+function calculateEngravingPrice(message, pricePerWord) {
+   // Change code below this line
+
+return message.split(" ").length * pricePerWord;
+
+   // Change code above this line
+}
+
+console.log(calculateEngravingPrice("JavaScript is in my blood", 10));
+console.log(calculateEngravingPrice("JavaScript is in my blood", 20));
+console.log(calculateEngravingPrice("Web-development is creative work", 40));
+console.log(calculateEngravingPrice("Web-development is creative work", 20));
+
+*/
+
+
+
+
+
+/* --------------------------------- TASK 13 --------------------------------- */
+
+/* Термин slug - это человеко-понятный уникальный идентификатор, который используется в веб-разработке для создания читабельных URL-адресов.
+
+Например, вместо того чтобы пользователь увидел в адресной строке mysite.com/posts/1q8fh74tx, можно сделать slug из названия статьи. В результате адрес получится более приятным для восприятия: mysite.com/posts/arrays-for-begginers.
+
+Внимание
+Slug это всегда строка в нижнем регистре, слова которой разделены тире.
+
+Напиши функцию slugify(title) которая принимает заголовок статьи, параметр title, и возвращает slug, созданный из этой строки.
+
+Значением параметра title будут строки, слова которых разделены только пробелами
+Все символы slug должны быть в нижнем регистре
+Все слова slug должна быть разделены тире
+Объявлена функция slugify(title)
+Вызов slugify("Arrays for begginers") возвращает "arrays-for-begginers"
+Вызов slugify("English for developer") возвращает "english-for-developer"
+Вызов slugify("Ten secrets of JavaScript") возвращает "ten-secrets-of-javascript"
+Вызов slugify("How to become a JUNIOR developer in TWO WEEKS") возвращает "how-to-become-a-junior-developer-in-two-weeks" */
+
+
+/* 
+
+function slugify(title) {
+  // Change code below this line
+
+const ss = title.toLowerCase().split(" ").join("-");
+  
+  return ss;
+
+  // Change code above this line
+}
+
+console.log(slugify("Arrays for begginers"));
+console.log(slugify("English for developer"));
+console.log(slugify("Ten secrets of JavaScript"));
+console.log(slugify("How to become a JUNIOR developer in TWO WEEKS"));
+
+*/
