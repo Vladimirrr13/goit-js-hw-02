@@ -46,7 +46,6 @@ console.log(checkAge(38));
 Вызов checkPassword("polyhax") возвращает "Access denied, wrong password!"
 Вызов checkPassword("jqueryismyjam") возвращает "Welcome!" */
 
-
 /* 
 
 function checkPassword(password) {
