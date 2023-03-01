@@ -60,7 +60,6 @@ function checkPassword(password) {
   // Change code above this line
 }
 
-
 */
 
 
