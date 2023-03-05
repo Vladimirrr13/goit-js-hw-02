@@ -579,3 +579,30 @@ console.log(calculateTotalPrice([412, 371, 94, 63, 176]));
 Вызов функции findLongestWord("Google do a roll") возвращает Google
 Вызов функции findLongestWord("May the force be with you") возвращает force
 Вызов функции findLongestWord() со случайной строкой возвращает правильное значение */
+
+
+/* 
+
+function findLongestWord(string) {
+  // Change code below this line
+
+let arrStr = string.split(' ');
+let longestWord = arrStr[0];
+
+    for (let i = 0; i < arrStr.length; i += 1) {
+
+    if (arrStr[i].length > longestWord.length) {
+      longestWord = arrStr[i];
+
+    }
+
+  }
+      return longestWord;
+}
+
+
+console.log(findLongestWord("The quick brown fox jumped over the lazy dog"));
+console.log(findLongestWord("Google do a roll"));
+console.log(findLongestWord("May the force be with you"));
+
+*/
