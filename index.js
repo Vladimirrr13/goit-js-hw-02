@@ -581,6 +581,7 @@ console.log(calculateTotalPrice([412, 371, 94, 63, 176]));
 Вызов функции findLongestWord() со случайной строкой возвращает правильное значение */
 
 
+
 /* 
 
 function findLongestWord(string) {
@@ -606,3 +607,73 @@ console.log(findLongestWord("Google do a roll"));
 console.log(findLongestWord("May the force be with you"));
 
 */
+
+
+
+
+
+
+/* --------------------------------- TASK 22 --------------------------------- */
+
+/* Дополни код функции createArrayOfNumbers(min, max) так, чтобы она возвращала массив всех целых чисел от значения min до max.
+
+Объявлена функция createArrayOfNumbers(min, max)
+Вызов функции createArrayOfNumbers(1, 3) возвращает [1, 2, 3]
+Вызов функции createArrayOfNumbers(14, 17) возвращает [14, 15, 16, 17]
+Вызов функции createArrayOfNumbers(29, 34) возвращает [29, 30, 31, 32, 33, 34]
+Вызов функции createArrayOfNumbers() со случайными min и max возвращает правильный массив
+В цикле for использовался метод push */
+
+
+/* 
+
+function createArrayOfNumbers(min, max) {
+  const numbers = [];
+  for(let i = min;  i <= max; i++)
+    numbers.push(i);
+  return numbers;
+}
+
+console.log(createArrayOfNumbers(1,3));
+console.log(createArrayOfNumbers(14,17));
+console.log(createArrayOfNumbers(29,34));
+
+*/
+
+
+
+/* --------------------------------- TASK 23 --------------------------------- */
+
+/* Напиши функцию filterArray(numbers, value), которая принимает массив чисел (параметр numbers) и возвращает новый массив, в котором будут только те элементы массива numbers, которые больше чем значение параметра value (число).
+
+Объявлена функция filterArray(numbers, value)
+Вызов функции filterArray([1, 2, 3, 4, 5], 3) возвращает [4, 5]
+Вызов функции filterArray([1, 2, 3, 4, 5], 4) возвращает [5]
+Вызов функции filterArray([1, 2, 3, 4, 5], 5) возвращает []
+Вызов функции filterArray([12, 24, 8, 41, 76], 38) возвращает [41, 76]
+Вызов функции filterArray([12, 24, 8, 41, 76], 20) возвращает [24, 41, 76]
+Вызов функции filterArray() со случайным массивом и числом возвращает правильный массив
+В цикле for использовался метод push */
+
+
+/* function filterArray(numbers, value) {
+  const newArray = [];
+  
+  for(let i = 0; numbers.length > i; i++){
+     
+      if (numbers[i]>value){
+          newArray.push(numbers[i])
+      }
+    
+  }
+      return newArray
+  }
+
+console.log(filterArray([1, 2, 3, 4, 5], 3));
+console.log(filterArray([1, 2, 3, 4, 5], 4));
+console.log(filterArray([1, 2, 3, 4, 5], 5));
+console.log(filterArray([12, 24, 8, 41, 76], 38));
+console.log(filterArray([12, 24, 8, 41, 76], 20)); */
+
+
+
