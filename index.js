@@ -825,3 +825,142 @@ console.log(filterArray([12, 24, 8, 41, 76], 38));
 console.log(filterArray([12, 24, 8, 41, 76], 20)); */
 
 
+
+/* --------------------------------- TASK 28 --------------------------------- */
+
+/* Дополни выражения остатка от деления так, чтобы код проходил тесты.
+
+Объявлена переменная a
+Значение переменной a это число 0
+Объявлена переменная b
+Значение переменной b это число 1
+Объявлена переменная c
+Значение переменной c это число 3
+Объявлена переменная d
+Значение переменной d это число 5
+Объявлена переменная e
+Значение переменной e это число 2 */
+
+
+/* 
+
+// Change code below this line
+const a = 3 % 3;
+const b = 4 % 3;
+const c = 11 % 4;
+const d = 12 % 7;
+const e = 8 % 3;
+
+*/
+
+
+
+
+
+/* --------------------------------- TASK 29 --------------------------------- */
+
+/* Напиши функцию getEvenNumbers(start, end) которая возвращает массив всех чётных чисел от start до end. Чётным считается число которое делится на 2 без остатка (10 % 2 === 0).
+
+Объявлена функция getEvenNumbers(start, end)
+Вызов функции getEvenNumbers(2, 5) возвращает [2, 4]
+Вызов функции getEvenNumbers(3, 11) возвращает [4, 6, 8, 10]
+Вызов функции getEvenNumbers(6, 12) возвращает [6, 8, 10, 12]
+Вызов функции getEvenNumbers(8, 8) возвращает [8]
+Вызов функции getEvenNumbers(7, 7) возвращает []
+Вызов функции getEvenNumbers() со случайными start и end возвращает правильный массив */
+
+
+/* 
+
+function getEvenNumbers(start, end) {
+  const evenNumbers = [];
+
+  for (let i = start; i <= end; i+=1) {
+    if (i % 2 === 0) {
+      evenNumbers.push(i);
+    }
+  }
+
+  return evenNumbers;
+}
+
+console.log(getEvenNumbers(2, 5));
+console.log(getEvenNumbers(3, 11));
+console.log(getEvenNumbers(6, 12));
+console.log(getEvenNumbers(8, 8));
+console.log(getEvenNumbers(7, 7));
+
+*/
+
+
+
+
+
+/* --------------------------------- TASK 30 --------------------------------- */
+
+/* Дополни код так, чтобы в переменную number записывалось первое число от start до end, которое делится на 5 без остатка.
+
+Объявлена переменная start со значением 6
+Объявлена переменная end со значением 27
+Объявлена переменная number без инициализации
+Итоговое значение переменной number равно 10
+В цикле for используется break для выхода до завершения всех итераций цикла */
+
+
+/* 
+
+const start = 6;
+const end = 27;
+let number;
+
+for (let i = start; i < end; i += 1) {
+  if (i % 5 === 0) {
+    number = i;
+    break;
+  }
+}
+
+
+*/
+
+
+
+
+
+
+/* --------------------------------- TASK 31 --------------------------------- */
+
+/* Выполни рефакторинг функции findNumber(start, end, divisor) так, чтобы она:
+
+возвращала первое число от start до end, которое делится на divisor без остатка
+не использовала оператор break
+не использовала переменную number
+Объявлена функция findNumber(start, end, divisor)
+Вызов findNumber(2, 6, 5) возвращает 5
+Вызов findNumber(8, 17, 3) возвращает 9
+Вызов findNumber(6, 9, 4) возвращает 8
+Вызов findNumber(16, 35, 7) возвращает 21
+Вызов findNumber() со случайным набором чисел возвращает верный результат
+В цикле for не должен использоваться break для выхода до завершения всех итераций цикла */
+
+
+/* 
+
+function findNumber(start, end, divisor) {
+  for (let i = start; i <= end; i+=1) {
+    if (i % divisor === 0) {
+      return i;
+    }
+  }
+}
+
+
+console.log(findNumber(2, 6, 5));
+console.log(findNumber(8, 17, 3));
+console.log(findNumber(6, 9, 4));
+console.log(findNumber(16, 35, 7));
+console.log(findNumber());
+
+*/
+
+
